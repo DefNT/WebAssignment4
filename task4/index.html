@@ -22,67 +22,73 @@
     <div class="container-center">
         <div class="card-box" style="max-width: 700px;">
             <h2>Registration Form</h2>
-            <form action="#" method="POST" class="was-validated">
+            <form action="#" class="was-validated">
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Enter your name" required minlength="2">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your name" required minlength="2">
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">First name is required</div>
                     </div>
                     <div class="col-md-6">
                         <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required minlength="2">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required minlength="2">
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Last name is required</div>
                     </div>
                     <div class="col-12">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Please enter a valid email address</div>
                     </div>
                     <div class="col-md-6">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required minlength="6">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required minlength="6">
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Password must be at least 6 characters</div>
                     </div>
                     <div class="col-md-6">
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
-                        <div class="invalid-feedback">Please confirm your password</div>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required minlength="6">
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please confirm your password (min 6 characters)</div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label d-block">Gender</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="male" required>
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
                             <label class="form-check-label" for="male">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="female" required>
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
                             <label class="form-check-label" for="female">Female</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label d-block">Hobbies</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="hobbyRunning">
+                            <input class="form-check-input" type="checkbox" id="hobbyRunning" name="hobbies" value="running">
                             <label class="form-check-label" for="hobbyRunning">Running</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="hobbyReading">
+                            <input class="form-check-input" type="checkbox" id="hobbyReading" name="hobbies" value="reading">
                             <label class="form-check-label" for="hobbyReading">Reading</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="hobbyMovies">
+                            <input class="form-check-input" type="checkbox" id="hobbyMovies" name="hobbies" value="movies">
                             <label class="form-check-label" for="hobbyMovies">Movies</label>
                         </div>
                     </div>
                     <div class="col-12">
                         <label for="country" class="form-label">Country</label>
-                        <select class="form-select" id="country" required>
+                        <select class="form-select" id="country" name="country" required>
                             <option selected disabled value="">Choose...</option>
                             <option>Kazakhstan</option>
                             <option>United States</option>
                             <option>France</option>
                         </select>
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Please select a country</div>
                     </div>
                     <div class="col-12 mt-4">
